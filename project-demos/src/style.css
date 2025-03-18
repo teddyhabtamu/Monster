@@ -4,56 +4,40 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #f5f9eb;
-  height: 100vh;
+.items-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
 }
 
-.container {
-  background: #fcfff3;
-  padding: 50px;
-}
-
-input {
-  padding: 15px;
-  border: none;
-  outline: none;
-  background: #f5f9eb;
-  width: 300px;
-  border-radius: 6px;
-  margin-right: 10px;
-}
-
-button {
-  border-radius: 100px;
-  background: #454545;
-  padding: 5px;
-  outline: none;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
+.card {
+  background: rgb(255, 249, 249);
+  font-size: 12px;
+  color: rgb(68, 68, 68);
+  margin: 10px;
+  padding: 30px;
+  transition: 1s ease;
   cursor: pointer;
 }
 
-.todos-list {
-  margin-top: 3rem;
+.card:hover {
+  transform: scale(1.1);
 }
 
-.todo {
-  list-style: none;
+.content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: #f5f9eb;
-  padding: 7px 20px;
-  margin: 10px;
   font-family: sans-serif;
+  margin-top: 20px;
 }
 
-.close {
-  padding: 5px 10px;
-  cursor: pointer;
+p {
+  font-weight: bold;
+}
+
+img {
+  border-radius: 5px;
+  height: 200px;
+  width: 300px;
 }
