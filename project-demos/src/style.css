@@ -5,41 +5,55 @@
 }
 
 body {
-  background: #000;
+  background: #f5f9eb;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: #fff;
 }
 
-.container .number {
-  font-size: 6rem;
+.container {
+  background: #fcfff3;
+  padding: 50px;
 }
 
-.btns-container {
-  width: 40rem;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5rem;
+input {
+  padding: 15px;
+  border: none;
+  outline: none;
+  background: #f5f9eb;
+  width: 300px;
+  border-radius: 6px;
+  margin-right: 10px;
 }
 
-.increment {
-  padding: 10px 20px;
+button {
   border-radius: 100px;
-  font-size: 2rem;
-  background: #141517;
+  background: #454545;
+  padding: 5px;
+  outline: none;
+  border: none;
   color: #fff;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
-.decrement {
-  padding: 10px 24px;
-  border-radius: 100px;
-  font-size: 2rem;
-  background: #141517;
-  color: #fff;
+.todos-list {
+  margin-top: 3rem;
+}
+
+.todo {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f9eb;
+  padding: 7px 20px;
+  margin: 10px;
+  font-family: sans-serif;
+}
+
+.close {
+  padding: 5px 10px;
   cursor: pointer;
 }
