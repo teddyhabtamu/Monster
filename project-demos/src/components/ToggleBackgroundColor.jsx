@@ -16,14 +16,14 @@ const ToggleBackgroundColor = () => {
   return (
     <div
       style={{
-        backgroundColor,
+        backgroundColor: backgroundColor,
         color: textColor,
       }}
     >
       <button
         onClick={handleClick}
         style={{
-          
+          buttonStyle,
           color: textColor,
           border: `2px solid ${textColor}`,
         }}
