@@ -8,6 +8,7 @@ import HiddenSearchBar from "./components/HiddenSearchBar";
 import Testimonials from "./components/Testimonials";
 import { accordionData } from "./utils/content";
 import Accordion from "./components/Accordion";
+import Form from "./components/Form";
 
 const App = () => {
   console.log(accordionData);
@@ -20,11 +21,12 @@ const App = () => {
       {/* <ToggleBackgroundColor/> */}
       {/* <HiddenSearchBar/> */}
       {/* <Testimonials/> */}
-      <div className="accordion"> 
+      {/* <div className="accordion"> 
         {accordionData.map(({ title, content }) => (
           <Accordion title={title} content={content} />
         ))}
-      </div>
+      </div> */}
+      <Form />
     </div>
   );
 };
