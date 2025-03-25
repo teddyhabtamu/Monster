@@ -18,6 +18,42 @@ const Form = () => {
   const [passwordColor, setPasswordColor] = useState("");
   const [confirmPasswordColor, setConfirmPasswordColor] = useState("");
 
+  const validate = (e) => {
+    e.preventDefault();
+
+    if (userName.length > 8) {
+      setErrorUserName("");
+      setUserColor("green");
+    } else {
+      setErrorUserName("Username must be at least 8 characters long");
+      setUserColor("red");
+    }
+
+    if (email.includes("@gmail")) {
+      setErrorEmail("");
+      setEmailColor("green");
+    } else {
+      setErrorEmail("Email must contain @gmail");
+      setEmailColor("red");
+    }
+
+    if (password.length > 8) {
+      setErrorPassword("");
+      setPasswordColor("green");
+    } else {
+      setErrorPassword("Password must be at least 8 characters long");
+      setPasswordColor("red");
+    }
+
+    if (confirmPassword === password) {
+      setErrorConfirmPassword("");
+      setConfirmPasswordColor("green");
+    } else {
+      setErrorConfirmPassword("Passwords do not match");
+      setConfirmPasswordColor("red");
+    }
+  };
+
   return (
     <>
       <div className="card">
@@ -50,6 +86,21 @@ const Form = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+
+          <p className="error">{errorPassword}</p>
+
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            style={{ borderColor: confirmPasswordColor }}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+
+          <p className="error">{errorConfirmPassword}</p>
+
+          <button className="submit-btn" onClick={validate}>
+            Submit
+          </button>
         </form>
       </div>
     </>
