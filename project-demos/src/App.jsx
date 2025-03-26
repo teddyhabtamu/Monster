@@ -13,6 +13,7 @@ import Navigation from "./components/E-commerce/Navigation/Nav";
 import Products from "./components/E-commerce/Products/Products";
 import Recommended from "./components/E-commerce/Recommended/Recommended";
 import "./index.css";
+import Sidebar from "./components/E-commerce/Sidebar/Sidebar";
 
 const App = () => {
   // console.log(accordionData);
@@ -31,7 +32,10 @@ const App = () => {
         ))}
       </div>
       <Form /> */}
+
       <Navigation />
+
+      <Sidebar />
 
       <Recommended />
 
