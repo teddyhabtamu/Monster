@@ -1,5 +1,7 @@
 import React from "react";
 import { FiHeart } from "react-icons/fi";
+import { AiFillHeart } from "react-icons/ai";
+
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 import "./Nav.css";
 
@@ -17,6 +19,7 @@ const Nav = () => {
       <div className="profile-container">
         <a href="#">
           <FiHeart className="nav-icons" />
+          <AiFillHeart className="nav-icons" />
         </a>
 
         <a href="#">
