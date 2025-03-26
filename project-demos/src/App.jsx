@@ -9,25 +9,34 @@ import Testimonials from "./components/Testimonials";
 import { accordionData } from "./utils/content";
 import Accordion from "./components/Accordion";
 import Form from "./components/Form";
+import Navigation from "./components/E-commerce/Navigation/Nav";
+import Products from "./components/E-commerce/Products/Products";
+import Recommended from "./components/E-commerce/Recommended/Recommended";
+import "./index.css";
 
 const App = () => {
-  console.log(accordionData);
+  // console.log(accordionData);
   return (
-    <div>
-      {/* <Counter/> */}
-      {/* <Todo/> */}
-      {/* <Meals/> */}
-      {/* <Calculator/> */}
-      {/* <ToggleBackgroundColor/> */}
-      {/* <HiddenSearchBar/> */}
-      {/* <Testimonials/> */}
-      {/* <div className="accordion"> 
+    <>
+      {/* <Counter />
+      <Todo />
+      <Meals />
+      <Calculator />
+      <ToggleBackgroundColor />
+      <HiddenSearchBar />
+      <Testimonials />
+      <div className="accordion"> 
         {accordionData.map(({ title, content }) => (
           <Accordion title={title} content={content} />
         ))}
-      </div> */}
-      <Form />
-    </div>
+      </div>
+      <Form /> */}
+      <Navigation />
+
+      <Recommended />
+
+      <Products />
+    </>
   );
 };
 

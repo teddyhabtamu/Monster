@@ -49,7 +49,7 @@ const Form = () => {
       setErrorConfirmPassword("");
       setConfirmPasswordColor("green");
     } else {
-      setErrorConfirmPassword("Passwords do not match");
+      setErrorConfirmPassword("Passwords didn't match");
       setConfirmPasswordColor("red");
     }
   };
