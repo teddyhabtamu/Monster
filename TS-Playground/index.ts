@@ -14,3 +14,15 @@ console.log(myAge)
 let isStudent: boolean = true;
 isStudent = !false;
 console.log(isStudent)
+
+
+// Type Inference
+let tech = "TypeScript";
+console.log("Tech name", tech)
+// console.log(typeof tech)
+
+let favNumber = 7;
+console.log("My favorite number", favNumber)
+
+let isDeveloper = true;
+console.log("Am I a developer? ", isDeveloper)
