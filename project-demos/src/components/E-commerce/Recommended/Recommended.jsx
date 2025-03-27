@@ -1,22 +1,22 @@
-import React from 'react'
-import "./Recommended.css"
-
+import React from "react";
+import "./Recommended.css";
+import Button from "../Button";
 
 const Recommended = () => {
   return (
     <>
       <div>
-        <h2 className='recommended-title'>Recommended</h2>
+        <h2 className="recommended-title">Recommended</h2>
         <div className="recommended-flex">
-          <button className='btns'>All Products</button>
-          <button className='btns'>Nike</button>
-          <button className='btns'>Addidas</button>
-          <button className='btns'>Puma</button>
-          <button className='btns'>Vans</button>
+          <Button value="All" />
+          <Button value="Nike" />
+          <Button value="Addidas" />
+          <Button value="Puma" />
+          <Button value="Vans" />
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Recommended
+export default Recommended;

@@ -1,8 +1,5 @@
-
-function Button() {
-  return (
-    <div>Button</div>
-  )
+function Button({value}) {
+  return <button className="btns">All Products</button>;
 }
 
 export default Button;

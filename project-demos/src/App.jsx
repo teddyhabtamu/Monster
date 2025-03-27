@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Counter from "./components/Counter";
 import Todo from "./components/Todo";
 import Meals from "./components/Meals";
@@ -15,10 +15,70 @@ import Recommended from "./components/E-commerce/Recommended/Recommended";
 import "./index.css";
 import Sidebar from "./components/E-commerce/Sidebar/Sidebar";
 
+import products from "./db/data";
+import Card from "./components/E-commerce/Card";
+
 const App = () => {
-  // console.log(accordionData);
+
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const [query, setQuery] = useState("");
+  console.log(query)
+
+  const handleInputChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+  const filteredItems = products.filter(
+    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  );
+
+  const handleChange = (e) => {
+    setSelectedCategory(e.target.value);
+  };
+
+  const handleClick = (e) => {
+    setSelectedCategory(e.target.value);
+  };
+
+  function filteredData(products, selected, query) {
+    let filteredProducts = products;
+
+    if (query) {
+      filteredProducts = filteredItems;
+    }
+
+    if (selected) {
+      filteredProducts = filteredProducts.filter(
+        ({ category, color, company, newPrice, title }) => {
+          category === selected ||
+            color === selected ||
+            company === selected ||
+            newPrice === selected ||
+            title === selected;
+        }
+      );
+    }
+
+    return filteredProducts.map(
+      ({ img, title, star, reviews, prevPrice, newPrice }) => (
+        <Card
+          key={Math.random()}
+          img={img}
+          title={title}
+          star={star}
+          reviews={reviews}
+          newPrice={newPrice}
+          prevPrice={prevPrice}
+        />
+      )
+    );
+  }
+
+  const result = filteredData(products, selectedCategory, query)
+
   return (
-    <>
+    <div>
       {/* <Counter />
       <Todo />
       <Meals />
@@ -32,15 +92,14 @@ const App = () => {
         ))}
       </div>
       <Form /> */}
+      <Sidebar handleChange={handleChange} />
 
       <Navigation />
-
-      <Sidebar />
 
       <Recommended />
 
       <Products />
-    </>
+    </div>
   );
 };
 
