@@ -32,4 +32,15 @@ let myCar: any = "Toyota";
 myCar = 2020;
 console.log(myCar)
 
+// Function Parameter Annotation
+function addOne(num: string) {
+  return num + 1;
+}
 
+console.log(addOne("1"))
+
+// Arrow Function Parameter Annotation
+const double = (num: number) => {
+  return num * 2;
+}
+console.log(double(10))
