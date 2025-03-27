@@ -26,3 +26,10 @@ console.log("My favorite number", favNumber)
 
 let isDeveloper = true;
 console.log("Am I a developer? ", isDeveloper)
+
+// Any Type
+let myCar: any = "Toyota";
+myCar = 2020;
+console.log(myCar)
+
+
