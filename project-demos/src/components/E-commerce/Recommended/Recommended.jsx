@@ -2,17 +2,17 @@ import React from "react";
 import "./Recommended.css";
 import Button from "../Button";
 
-const Recommended = () => {
+const Recommended = ({handleClick}) => {
   return (
     <>
       <div>
         <h2 className="recommended-title">Recommended</h2>
         <div className="recommended-flex">
-          <Button value="All" />
-          <Button value="Nike" />
-          <Button value="Addidas" />
-          <Button value="Puma" />
-          <Button value="Vans" />
+          <Button handleClick={handleClick} value="" title="All Products" />
+          <Button handleClick={handleClick} value="Nike" title={"Nike"} />
+          <Button handleClick={handleClick} value="Adidas" title={"Adidas"} />
+          <Button handleClick={handleClick} value="Puma" title={"Puma"} />
+          <Button handleClick={handleClick} value="Vans" title={"Vans"} />
         </div>
       </div>
     </>

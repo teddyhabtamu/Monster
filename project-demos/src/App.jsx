@@ -41,41 +41,46 @@ const App = () => {
     setSelectedCategory(e.target.value);
   };
 
-  function filteredData(products, selected, query) {
-    let filteredProducts = products;
+function filteredData(products, selected, query) {
+  let filteredProducts = products;
 
-    if (query) {
-      filteredProducts = filteredItems;
-    }
-
-    if (selected) {
-      filteredProducts = filteredProducts.filter(
-        ({ category, color, company, newPrice, title }) => {
-          category === selected ||
-            color === selected ||
-            company === selected ||
-            newPrice === selected ||
-            title === selected;
-        }
-      );
-    }
-
-    return filteredProducts.map(
-      ({ img, title, star, reviews, prevPrice, newPrice }) => (
-        <Card
-          key={Math.random()}
-          img={img}
-          title={title}
-          star={star}
-          reviews={reviews}
-          newPrice={newPrice}
-          prevPrice={prevPrice}
-        />
-      )
+  // Filter by query if provided
+  if (query) {
+    filteredProducts = products.filter((product) =>
+      product.title.toLowerCase().includes(query.toLowerCase())
     );
   }
 
+  if (selected) {
+    filteredProducts = filteredProducts.filter(
+      ({ category, color, company, newPrice, title }) =>
+        category === selected ||
+        color === selected ||
+        company === selected ||
+        newPrice === selected ||
+        title === selected
+    );
+  }
+
+  // Map to Card components
+  return filteredProducts.map(
+    ({ img, title, star, reviews, prevPrice, newPrice }) => (
+      <Card
+        key={Math.random()}
+        img={img}
+        title={title}
+        star={star}
+        reviews={reviews}
+        newPrice={newPrice}
+        prevPrice={prevPrice}
+      />
+    )
+  );
+}
+
   const result = filteredData(products, selectedCategory, query)
+
+  console.log(result)
 
   return (
     <div>
@@ -94,11 +99,11 @@ const App = () => {
       <Form /> */}
       <Sidebar handleChange={handleChange} />
 
-      <Navigation />
+      <Navigation query={query} handleInputChange={handleInputChange} />
 
-      <Recommended />
+      <Recommended handleClick={handleClick} />
 
-      <Products />
+      <Products result={result} />
     </div>
   );
 };

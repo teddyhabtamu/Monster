@@ -1,5 +1,5 @@
-function Button({value}) {
-  return <button className="btns">All Products</button>;
+function Button({handleClick, value, title}) {
+  return <button value={value} onClick={handleClick} className="btns">{title}</button>;
 }
 
 export default Button;

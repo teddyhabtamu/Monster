@@ -12,7 +12,7 @@ const Colors = ({ handleChange }) => {
           type="radio"
           onChange={handleChange}
           value={""}
-          name="test1"
+          name="test3"
         />
         <span
           className="checkmark all"
@@ -57,7 +57,7 @@ const Colors = ({ handleChange }) => {
           type="radio"
           onChange={handleChange}
           value={"white"}
-          name="test1"
+          name="test3"
         />
         <span
           className="checkmark"
