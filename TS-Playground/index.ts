@@ -44,3 +44,10 @@ const double = (num: number) => {
   return num * 2;
 }
 console.log(double(10))
+
+// Default parameters
+function greet(person: string = "Teddy") {
+  console.log("Hello", person);
+}
+
+greet("Bera")
