@@ -51,3 +51,18 @@ function greet(person: string = "Teddy") {
 }
 
 greet("Bera")
+
+
+// Anotating the function return value
+function double2(x:number): number {
+  return x * 2;
+}
+
+console.log(double2(7));
+
+// Arrow Function
+const triple = (x: number): number => {
+  return x * 3;
+}
+
+console.log(triple(3))
