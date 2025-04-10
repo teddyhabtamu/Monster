@@ -68,8 +68,29 @@
 // console.log(triple(3))
 
 // void in typescript
-function printMessage(message: string): void {
-  console.log("This is my message:", message)
+// function printMessage(message: string) {
+//   console.log("This is my message:", message)
+// }
+
+// printMessage("Work hard!")
+
+
+// Never in Typescript
+// -> A function that always throws an error
+// -> A function that has an infinite loop
+// -> A variable that can never have a value
+
+function throwError(msg:string): never {
+  throw new Error(msg)
 }
 
-printMessage("Work hard!")
+function infiniteLoop(): never {
+  while(true) {}
+}
+
+let x: never;
+function neverReturns(): never {
+  while (true) {}
+}
+
+x = neverReturns();
