@@ -7,4 +7,4 @@
 let myTuple: [string, number] = ['One', 1];
 let [alphabet, numeric] = myTuple;
 
-console.log(alphabet)
+console.log(alphabet);
