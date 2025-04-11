@@ -30,4 +30,4 @@ const items: string[] | number[] = ['one', "two", 'three']
 
 
 // To contain both string and number in a single array we can use this
-const items1: (string | number)[] = [1, "one", 2, "Two"]
+const items1: (string | number | true)[] = [1, "one", 2, "Two", true]
